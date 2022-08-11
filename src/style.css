@@ -3,21 +3,46 @@
   --second-color: #f4f2fe;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
-
+@media (max-width: 800px) {
+  h1.text-center {
+    font-size: 60px;
+  }
+  h2 {
+    text-align: center !important;
+  }
+  h2.text-center {
+    font-size: 36px;
+  }
+  #hide-image {
+    display: none;
+  }
+  p.text-start {
+    text-align: center !important;
+  }
+  .navigation-button {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+body {
+  margin-top: 100px;
+}
 h1,
 h2,
 h3 {
-  text-align: center;
-  margin: 0 !important;
-}
-h2 {
-  font-size: 48px !important;
+  margin: 0;
 }
 h1 {
-  font-size: 96px !important;
+  font-size: 96px;
 }
+h2 {
+  font-size: 48px;
+  text-align: left;
+}
+
 h3 {
-  font-size: 24px !important;
+  font-size: 24px;
   opacity: 0.7;
 }
 p {
@@ -27,8 +52,11 @@ p {
 }
 .container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
-.navigation-links a {
+.navigation-links a,
+.navigation-button {
   padding: 20px 15px;
   text-decoration: none;
   border: 1px solid var(--main-color);
@@ -36,9 +64,16 @@ p {
   margin: 20px;
   text-transform: capitalize;
 }
+
 .navigation-links {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+}
+.navigation-button,
+#contact-link {
+  background: var(--main-color);
+  color: white;
+  box-shadow: var(--box-shadow);
 }
 .info {
   margin: 30px 20px 30px 0px;
@@ -48,11 +83,6 @@ p {
   margin: 0 15px 0 30px;
 }
 
-#contact-link {
-  background: var(--main-color);
-  color: white;
-  box-shadow: var(--box-shadow);
-}
 #about-me {
   color: var(--main-color);
 }
@@ -64,4 +94,7 @@ p {
   text-decoration: none;
   font-size: 28px;
   color: var(--main-color);
+}
+#mail:hover {
+  text-decoration: underline;
 }
